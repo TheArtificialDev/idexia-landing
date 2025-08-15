@@ -18,8 +18,8 @@ export default function Home() {
 
       {/* animated magnet lines background */}
       <div className="absolute inset-0 flex items-center justify-center z-0">
-        {/* fewer rows -> more vertical spacing (zoomed in); slightly fewer columns to keep aspect */}
-        <MagnetLines rows={32} columns={54} containerSize="100%" lineWidth="0.22vmin" lineHeight="3.8vmin" />
+        {/* responsive density: let MagnetLines compute rows/columns from viewport */}
+        <MagnetLines containerSize="100%" lineWidth="0.44vmin" lineHeight="3.8vmin" spacing={56} />
       </div>
 
       {/* content */}
