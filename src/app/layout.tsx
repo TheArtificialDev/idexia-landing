@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Idexia Studio",
-  description: "Content Orchestration Platform",
+  title: "Idexia Studio - AI-Powered Social Media Content Engine",
+  description: "Transform your social media from stress to success with Idexia Studio's AI-powered content creation and management platform. Start your free trial today.",
 };
 
 export default function RootLayout({

@@ -1,26 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Calming pastel color palette */
+  --background: #fefffe;
+  --foreground: #3a444e;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix for gradient text to ensure it's always visible */
+.gradient-text {
+  background: linear-gradient(135deg, #0ea5e9, #22c55e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0ea5e9; /* Fallback color */
+  display: inline-block;
+}
+
+/* Fallback for browsers that don't support background-clip: text */
+@supports not (-webkit-background-clip: text) {
+  .gradient-text {
+    background: none;
+    color: #0ea5e9;
+  }
+}
+
+.gradient-text-primary {
+  background: linear-gradient(135deg, #0ea5e9, #0c4a6e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0ea5e9; /* Fallback color */
+  display: inline-block;
+}
+
+@supports not (-webkit-background-clip: text) {
+  .gradient-text-primary {
+    background: none;
+    color: #0ea5e9;
+  }
+}
+
+.gradient-text-secondary {
+  background: linear-gradient(135deg, #22c55e, #14532d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #22c55e; /* Fallback color */
+  display: inline-block;
+}
+
+@supports not (-webkit-background-clip: text) {
+  .gradient-text-secondary {
+    background: none;
+    color: #22c55e;
+  }
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #f97316, #7c2d12);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #f97316; /* Fallback color */
+  display: inline-block;
+}
+
+@supports not (-webkit-background-clip: text) {
+  .gradient-text-accent {
+    background: none;
+    color: #f97316;
+  }
+}
+
+.gradient-text-warning {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ef4444; /* Fallback color */
+  display: inline-block;
+}
+
+@supports not (-webkit-background-clip: text) {
+  .gradient-text-warning {
+    background: none;
+    color: #ef4444;
+  }
+}
+
+/* Ensure text is always readable */
+.text-readable {
+  color: #1f2937 !important;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
+/* High contrast text for better accessibility */
+.text-high-contrast {
+  color: #111827 !important;
+  font-weight: 600;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0ea5e9, #0c4a6e);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #22c55e, #14532d);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #f97316, #7c2d12);
 }
